@@ -19,7 +19,7 @@
             </Label>
          </children>
       </HBox>
-      <TableView prefHeight="534.0" prefWidth="702.0">
+      <TableView fx:id="table" prefHeight="534.0" prefWidth="702.0">
          <columns>
             <TableColumn fx:id="title" prefWidth="222.0" text="Title" />
             <TableColumn fx:id="category" prefWidth="166.5" text="Catagory" />
