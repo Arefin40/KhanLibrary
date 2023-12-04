@@ -1,18 +1,45 @@
 package application;
 
-import library.Book;
+import library.Item;
+import library.Member;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class BooksController {
-
-   @FXML
-   private TableColumn<Book, String> title, category, publisher;
-
-   @FXML
-   private TableColumn<Book, String[]> authors;
+public class BooksController implements Initializable {
 
    @FXML
-   private TableColumn<Book, Integer> publishYear;
+   private TableView<Item> table;
 
+   @FXML
+   private TableColumn<Item, String> title, category, publisher;
+
+   @FXML
+   private TableColumn<Item, String[]> authors;
+
+   @FXML
+   private TableColumn<Item, Integer> publishYear;
+
+   @Override
+   public void initialize(URL location, ResourceBundle resources) {
+      title.setCellValueFactory(new PropertyValueFactory<>("title"));
+      category.setCellValueFactory(new PropertyValueFactory<>("category"));
+      publisher.setCellValueFactory(new PropertyValueFactory<>("publisherName"));
+      authors.setCellValueFactory(new PropertyValueFactory<>("authors"));
+      publishYear.setCellValueFactory(new PropertyValueFactory<>("publishYear"));
+
+      ObservableList<Item> books = FXCollections.observableArrayList();
+      books.addAll(App.library.findItems("Book"));
+      if (!books.isEmpty()) {
+         table.setItems(books);
+      }
+   }
 }
