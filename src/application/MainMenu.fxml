@@ -35,12 +35,12 @@
             </HBox>
             <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
                <children>
-                  <Button fx:id="minusbtn" mnemonicParsing="false" onAction="#minimize" prefWidth="30.0">
+                  <Button mnemonicParsing="false" onAction="#minimize" prefWidth="30.0">
                      <graphic>
                         <FontAwesomeIcon glyphName="MINUS" />
                      </graphic>
                   </Button>
-                  <Button fx:id="closebtn" mnemonicParsing="false" onAction="#close" prefWidth="30.0">
+                  <Button mnemonicParsing="false" onAction="#close" prefWidth="30.0">
                      <graphic>
                         <FontAwesomeIcon glyphName="CLOSE" />
                      </graphic>
@@ -69,32 +69,32 @@
             </Label>
             <VBox alignment="TOP_CENTER" spacing="10.0">
                <children>
-                  <Button fx:id="additem" mnemonicParsing="false" onAction="#additem" prefHeight="26.0" prefWidth="94.0" text="Add Item">
+                  <Button fx:id="additemBtn" mnemonicParsing="false" onAction="#additem" prefHeight="30.0" prefWidth="100.0" text="Add Item">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="addmember" mnemonicParsing="false" onAction="#addmember" prefHeight="26.0" prefWidth="94.0" text="Add Member">
+                  <Button fx:id="addmemberBtn" mnemonicParsing="false" onAction="#addmember" prefHeight="30.0" prefWidth="100.0" text="Add Member">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="bookview" mnemonicParsing="false" onAction="#bookview" prefHeight="26.0" prefWidth="92.0" text="Books">
+                  <Button mnemonicParsing="false" onAction="#bookview" prefHeight="30.0" prefWidth="100.0" text="Books">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="publicationview" mnemonicParsing="false" onAction="#publicationview" prefHeight="26.0" prefWidth="92.0" text="Publications">
+                  <Button mnemonicParsing="false" onAction="#publicationview" prefHeight="30.0" prefWidth="100.0" text="Publications">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="movieview" mnemonicParsing="false" onAction="#movieview" prefHeight="26.0" prefWidth="92.0" text="Movies">
+                  <Button mnemonicParsing="false" onAction="#movieview" prefHeight="30.0" prefWidth="100.0" text="Movies">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                  <Button fx:id="checkout" mnemonicParsing="false" onAction="#checkout" prefHeight="26.0" prefWidth="91.0" text="Check Out">
+                  <Button mnemonicParsing="false" onAction="#checkout" prefHeight="30.0" prefWidth="100.0" text="Check Out">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -106,7 +106,7 @@
             </VBox>
             <VBox alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <Button fx:id="singoutbtn" mnemonicParsing="false" onAction="#singOut" text="SIGN OUT">
+                  <Button mnemonicParsing="false" onAction="#singOut" prefHeight="30.0" prefWidth="100.0" text="SIGN OUT">
                      <graphic>
                         <FontAwesomeIcon glyphName="SIGN_OUT" />
                      </graphic>

@@ -18,8 +18,7 @@ public class MainMenuController implements Initializable {
     private VBox mainContainer;
 
     @FXML
-    private Button bookview, movieview, publicationview,
-            additem, addmember, checkout, closebtn, minusbtn, singoutbtn;
+    private Button additemBtn, addmemberBtn;
 
     @FXML
     void bookview(ActionEvent event) {
@@ -44,6 +43,11 @@ public class MainMenuController implements Initializable {
     @FXML
     void addmember(ActionEvent event) {
         loadPage("AddMember");
+    }
+
+    @FXML
+    void members(ActionEvent event) {
+        loadPage("Members");
     }
 
     @FXML
@@ -84,9 +88,11 @@ public class MainMenuController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        additemBtn.managedProperty().bind(additemBtn.visibleProperty());
+        addmemberBtn.managedProperty().bind(addmemberBtn.visibleProperty());
         if (!App.isLibrarian) {
-            additem.setVisible(false);
-            addmember.setVisible(false);
+            additemBtn.setVisible(false);
+            addmemberBtn.setVisible(false);
         }
     }
 }
