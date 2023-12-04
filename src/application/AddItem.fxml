@@ -5,11 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox prefHeight="655.0" prefWidth="800.0"  style="-fx-background-color: white;" spacing="20.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddItemController">
+<HBox prefHeight="655.0" prefWidth="800.0" spacing="20.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddItemController">
    <children>
       <VBox alignment="TOP_CENTER" spacing="12.0" style="-fx-background-color: #c4c0c0;" HBox.hgrow="ALWAYS">
          <children>
@@ -23,32 +24,32 @@
             </Label>
             <TextField fx:id="booktitle" alignment="CENTER" prefHeight="30.0" promptText="Title">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="bookcat" alignment="CENTER" prefHeight="30.0" promptText="Category">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="bookauthor" alignment="CENTER" prefHeight="30.0" promptText="Author">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="bookpbyear" alignment="CENTER" prefHeight="30.0" promptText="Publish Year">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="bookpbname" alignment="CENTER" prefHeight="30.0" promptText="Publisher Name">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <Button mnemonicParsing="false" onAction="#bookAdd" prefHeight="30.0" prefWidth="150.0" text="Add">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font size="14.0" />
                </font>
             </Button>
          </children>
@@ -68,50 +69,59 @@
             </Label>
             <TextField fx:id="pubtitle" alignment="CENTER" prefHeight="30.0" promptText="Title">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="pubcat" alignment="CENTER" prefHeight="30.0" promptText="Category">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="pubauthor" alignment="CENTER" prefHeight="30.0" promptText="Author">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
-            <TextField fx:id="pubname" prefHeight="30.0" promptText="Publisher Name">
+            <TextField fx:id="pubname" alignment="CENTER" prefHeight="30.0" promptText="Publisher Name">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <HBox alignment="TOP_CENTER">
                <children>
                   <Label alignment="CENTER" text="Is Journal">
                      <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font size="14.0" />
                      </font>
                      <HBox.margin>
                         <Insets right="16.0" />
                      </HBox.margin>
                   </Label>
-                  <RadioButton fx:id="isjournalyes" mnemonicParsing="false" text="Yes">
+                  <RadioButton mnemonicParsing="false" text="Yes">
                      <HBox.margin>
                         <Insets right="8.0" />
                      </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="isJournal" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
                   </RadioButton>
-                  <RadioButton fx:id="isjournalno" mnemonicParsing="false" text="No" />
+                  <RadioButton mnemonicParsing="false" text="No" toggleGroup="$isJournal">
+                     <font>
+                        <Font size="14.0" />
+                     </font></RadioButton>
                </children>
             </HBox>
-            <TextField fx:id="pubyear" prefHeight="30.0" promptText="Publish Year">
+            <TextField fx:id="pubyear" alignment="CENTER" prefHeight="30.0" promptText="Publish Year">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <Button mnemonicParsing="false" onAction="#pubAdd" prefHeight="30.0" prefWidth="150.0" text="Add">
                <font>
-                  <Font name="System Bold" size="13.0" />
+                  <Font size="14.0" />
                </font>
             </Button>
          </children>
@@ -131,27 +141,27 @@
             </Label>
             <TextField fx:id="movieTitle" alignment="CENTER" prefHeight="30.0" promptText="Title">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="movieCat" alignment="CENTER" prefHeight="30.0" promptText="Category">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="moviedirector" alignment="CENTER" prefHeight="30.0" promptText="Director">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <TextField fx:id="movieRelease" alignment="CENTER" prefHeight="30.0" promptText="Release Year">
                <font>
-                  <Font name="System Bold" size="12.0" />
+                  <Font size="14.0" />
                </font>
             </TextField>
             <Button mnemonicParsing="false" onAction="#movieAdd" prefHeight="30.0" prefWidth="150.0" text="Add">
                <font>
-                  <Font name="System Bold" size="13.0" />
+                  <Font size="14.0" />
                </font>
             </Button>
          </children>
