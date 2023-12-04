@@ -19,14 +19,13 @@
             </Label>
          </children>
       </HBox>
-      <TableView prefHeight="534.0" prefWidth="702.0">
+      <TableView fx:id="table" prefHeight="534.0" prefWidth="702.0">
          <columns>
             <TableColumn fx:id="title" prefWidth="199.0" text="Title" />
             <TableColumn fx:id="category" prefWidth="114.5" text="Catagory" />
-            <TableColumn fx:id="isJournal" minWidth="4.800048828125" prefWidth="84.0" text="IsJournal" />
             <TableColumn fx:id="authors" minWidth="0.0" prefWidth="158.5" text="Author" />
-            <TableColumn fx:id="publisher" prefWidth="129.5" text="Publisher Name" />
-            <TableColumn fx:id="publishYear" minWidth="0.0" prefWidth="90.0" text="Publish Year" />
+            <TableColumn fx:id="publisher" prefWidth="198.5" text="Publisher Name" />
+            <TableColumn fx:id="publishYear" minWidth="0.0" prefWidth="104.5" text="Publish Year" />
          </columns>
       </TableView>
    </children>
